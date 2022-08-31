@@ -7,6 +7,8 @@ const DEBOUNCE_DELAY = 300;
 
 const inputBox = document.querySelector('input#search-box');
 
+document.querySelector('body').style.padding = '20px';
+
 inputBox.addEventListener('input', debounce((event) => {
   fetchCountries(inputBox.value.trim())
     .then((value) => { return renderCountries(value); })
